@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#111d30" name="theme-color"/>
+  <title>
+   Midnight Snack — Top Shelf
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <main class="shell">
+   <header class="masthead">
+    <span class="stamp">
+     03:17 AM
+    </span>
+    <span class="edition">
+     THE FRIDGE IS OPEN
+    </span>
+   </header>
+   <section class="hero">
+    <h1>
+     MIDNIGHT
+     <em>
+      SNACK
+      <span class="period">
+       .
+      </span>
+     </em>
+    </h1>
+    <div aria-hidden="true" class="hero-doodle">
+     <div class="mascot">
+      <i class="eye left">
+      </i>
+      <i class="eye right">
+      </i>
+      <i class="mouth">
+      </i>
+     </div>
+    </div>
+   </section>
+   <section aria-label="Midnight Snack game" class="game-card">
+    <div class="game-top">
+     <div>
+      <span class="small-label">
+       LEVEL 01 · TOP SHELF
+      </span>
+      <strong aria-live="polite" id="status" role="status">
+       FIND 5 SNACKS
+      </strong>
+     </div>
+     <div class="scoreboard">
+      <div>
+       <span class="small-label">
+        SCORE
+       </span>
+       <strong id="score">
+        00000
+       </strong>
+      </div>
+      <div>
+       <span class="small-label">
+        BEST
+       </span>
+       <strong id="best">
+        00000
+       </strong>
+      </div>
+      <div>
+       <span class="small-label">
+        SNACKS
+       </span>
+       <strong id="remaining">
+        0 / 5
+       </strong>
+      </div>
+      <div>
+       <span class="small-label">
+        RUN TIME
+       </span>
+       <strong id="run-time">
+        0:00
+       </strong>
+      </div>
+      <div class="power" hidden="" id="power">
+       🌶 HOT SAUCE
+       <strong id="power-time">
+        7s
+       </strong>
+      </div>
+     </div>
+    </div>
+    <div class="board-wrap">
+     <canvas aria-label="Maze game: collect five glowing snacks and return to the blue door, avoiding milk and cheese" height="576" id="game" width="672">
+     </canvas>
+     <div class="overlay" id="overlay">
+      <div class="overlay-card">
+       <span class="overlay-kicker" id="overlay-kicker">
+        03:17 AM
+       </span>
+       <h2 id="overlay-title">
+        Snack run.
+       </h2>
+       <p id="overlay-copy">
+        Grab 5 snacks and return to the blue door. Chain snacks within 12 seconds for up to 3× points. Hot Sauce turns the hunters into your next meal.
+       </p>
+       <button id="play" type="button">
+        PLAY
+        <span aria-hidden="true">
+         ↗
+        </span>
+       </button>
+       <span class="overlay-hint">
+        ARROWS / WASD · P TO PAUSE
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="run-strip">
+     <span id="combo">
+      SNACK CHAIN · COLLECT WITHIN 12s
+     </span>
+     <span id="crumbs">
+      CRUMBS 0 / 0
+     </span>
+     <span id="enemy-warning">
+      4s HEAD START
+     </span>
+    </div>
+    <div class="game-legend">
+     <span>
+      <i class="legend-swatch snack">
+      </i>
+      SNACKS = GOAL
+     </span>
+     <span>
+      <i class="legend-swatch door">
+      </i>
+      BLUE DOOR = EXIT
+     </span>
+     <span>
+      <i class="legend-swatch sauce">
+      </i>
+      HOT SAUCE = CHASE ENEMIES
+     </span>
+     <span>
+      <i class="legend-swatch crumb">
+      </i>
+      CRUMBS = BONUS
+     </span>
+    </div>
+    <div class="game-bottom">
+     <div class="lives">
+      CHANCES
+      <strong id="lives">
+       ♥ ♥ ♥
+      </strong>
+     </div>
+     <div class="controls">
+      <span>
+       MOVE
+      </span>
+      <kbd>
+       ↑
+      </kbd>
+      <kbd>
+       ←
+      </kbd>
+      <kbd>
+       ↓
+      </kbd>
+      <kbd>
+       →
+      </kbd>
+      <span class="or">
+       OR
+      </span>
+      <kbd>
+       W
+      </kbd>
+      <kbd>
+       A
+      </kbd>
+      <kbd>
+       S
+      </kbd>
+      <kbd>
+       D
+      </kbd>
+      <span>
+       · P TO PAUSE
+      </span>
+     </div>
+     <div class="game-actions">
+      <button aria-pressed="false" class="text-button" id="sound" type="button">
+       SOUND ON
+      </button>
+      <button class="text-button" id="pause" type="button">
+       PAUSE
+      </button>
+      <button class="text-button" id="restart" type="button">
+       RESTART ↺
+      </button>
+     </div>
+    </div>
+   </section>
+   <div aria-label="Touch movement controls" class="mobile-controls">
+    <button aria-label="Move up" data-direction="up">
+     ↑
+    </button>
+    <div>
+     <button aria-label="Move left" data-direction="left">
+      ←
+     </button>
+     <button aria-label="Move down" data-direction="down">
+      ↓
+     </button>
+     <button aria-label="Move right" data-direction="right">
+      →
+     </button>
+    </div>
+   </div>
+   <footer>
+    <span>
+     BUILT AFTER DARK © 2026
+    </span>
+   </footer>
+  </main>
+  <script src="src/main.js" type="module">
+  </script>
+ </body>
+</html>
